@@ -34,7 +34,6 @@ PORTAGE_ELOG_MAILSUBJECT="[portage] ebuild log for \${PACKAGE} on \${HOST}"
 PORTAGE_ELOG_SYSTEM="save"
 <% end -%>
 
-SYNC="<%= @rsync_mirror %>"
 GENTOO_MIRRORS="<%= @distfile_mirrors.uniq.join(" ") %>"
 <% unless @portage_binhost.to_s == "" -%>
 PORTAGE_BINHOST="<%= @portage_binhost %>"

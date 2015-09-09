@@ -17,3 +17,16 @@ directory "/etc/portage/patches" do
   group "root"
   mode 0755
 end
+
+directory "/etc/portage/repos.conf" do
+  owner "root"
+  group "root"
+  mode 0755
+end
+
+template  "/etc/portage/repos.conf/gentoo.conf" do 
+  source etc/portage/repos.conf/gentoo.conf.erb
+  variables({
+    :rsync_mirror => node[:gentoo][:rsync_mirror]
+  })
+end
