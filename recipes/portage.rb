@@ -25,7 +25,7 @@ directory "/etc/portage/repos.conf" do
 end
 
 template  "/etc/portage/repos.conf/gentoo.conf" do 
-  source etc/portage/repos.conf/gentoo.conf.erb
+  source "etc/portage/repos.conf/gentoo.conf.erb"
   variables({
     :rsync_mirror => node[:gentoo][:rsync_mirror]
   })
